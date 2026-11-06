@@ -1,0 +1,91 @@
+-- Textos do mod em ingles e portugues. O idioma vem da configuracao do mod ("auto" segue o jogo).
+local L = {}
+L.en = {
+    title = "The Electric Assassin",
+    description = "*Strong as an ox\n*Gone in the blink of an eye\n*Carries the storm in his blade",
+    quote = "\"You'll only see the lightning.\"",
+    survivability = "High",
+    dagger = "Dagger",
+    rune = "Electric Rune",
+    dagger_desc = "A curved, crackling dagger. It hums with impatience.",
+    rune_desc = "Gives BLINK a dash; with the Dagger in hand, the dash has no cooldown. +10% speed. 30 uses.",
+    dagger_recipe = "BLINK's electric weapon.",
+    rune_recipe = "Dash on its own; no cooldown with the Dagger. +10% speed. 30 uses.",
+    dagger_broke = "The Dagger shattered.",
+    rune_broke = "The Electric Rune shattered.",
+    blink_seen = {
+        GENERIC = "It's %s. He's grinning again.",
+        ATTACKER = "%s is a little too stabby today.",
+        MURDERER = "Murderer! I knew that grin was trouble!",
+        REVIVER = "%s brings back ghosts. Quickly, of course.",
+        GHOST = "%s wasn't fast enough this time.",
+        FIRESTARTER = "%s, stick to lightning. Leave the fire alone.",
+    },
+    hud_equip = "Equip the Dagger or the Rune",
+    hud_wet = "Too wet: dash off",
+    hud_ready = "Dash [%s] READY",
+    hud_cd = "Dash: %ds",
+    hud_line = "BLINK [F6: key]  |  %s  |  Shock: %d/5  |  Strength %sx",
+    hud_rune = "Electric Rune: %d/%d uses",
+    menu_title = "BLINK - Personal dash key",
+    menu_body = "Dash: [%s]\nPress a key, an extra mouse button or use the scroll wheel.\nThen click Save. F6 opens; Esc cancels.\nLeft/right click are reserved for the game and menus.\n",
+    menu_save = "Save",
+    menu_default = "Default: G",
+    menu_cancel = "Cancel",
+    menu_saving = "Saving...",
+    menu_fail = "Couldn't save. Please try again.",
+    menu_badkey = "Key unavailable. Use a letter, number or function key.",
+    mouse_middle = "Scroll click",
+    mouse_up = "Scroll up",
+    mouse_down = "Scroll down",
+    mouse_extra = "Extra mouse button (%d)",
+}
+L.pt = {
+    title = "O Assassino Elétrico",
+    description = "*É forte como um touro\n*Some num piscar de olhos\n*Traz a tempestade na lâmina",
+    quote = "\"Você só vai ver o raio.\"",
+    survivability = "Alta",
+    dagger = "Dagger",
+    rune = "Runa Elétrica",
+    dagger_desc = "Uma adaga curva que estala de impaciência.",
+    rune_desc = "Dá o dash ao BLINK; com a Dagger na mão, o dash fica sem recarga. +10% de velocidade. 30 usos.",
+    dagger_recipe = "A arma elétrica do BLINK.",
+    rune_recipe = "Dash sozinha; sem recarga junto com a Dagger. +10% de velocidade. 30 usos.",
+    dagger_broke = "A Dagger se partiu.",
+    rune_broke = "A Runa Elétrica se partiu.",
+    blink_seen = {
+        GENERIC = "É o %s. Sorrindo de novo.",
+        ATTACKER = "%s está esfaqueando demais hoje.",
+        MURDERER = "Assassino! Eu sabia que aquele sorriso era encrenca!",
+        REVIVER = "%s traz fantasmas de volta. Rapidinho, claro.",
+        GHOST = "%s não foi rápido o bastante dessa vez.",
+        FIRESTARTER = "%s, fica no raio. Deixa o fogo em paz.",
+    },
+    hud_equip = "Equipe a Dagger ou a Runa",
+    hud_wet = "Molhado: dash desligado",
+    hud_ready = "Dash [%s] PRONTO",
+    hud_cd = "Dash: %ds",
+    hud_line = "BLINK [F6: tecla]  |  %s  |  Choque: %d/5  |  Força %sx",
+    hud_rune = "Runa Elétrica: %d/%d usos",
+    menu_title = "BLINK - Controle pessoal do dash",
+    menu_body = "Dash: [%s]\nPressione uma tecla, botão extra ou use o scroll.\nDepois clique em Salvar. F6 abre; Esc cancela.\nClique esquerdo/direito reservados ao jogo e menu.\n",
+    menu_save = "Salvar",
+    menu_default = "Padrão: G",
+    menu_cancel = "Cancelar",
+    menu_saving = "Salvando...",
+    menu_fail = "Não foi possível salvar. Tente novamente.",
+    menu_badkey = "Tecla indisponível. Use uma letra, número ou tecla de função.",
+    mouse_middle = "Clique do scroll",
+    mouse_up = "Scroll para cima",
+    mouse_down = "Scroll para baixo",
+    mouse_extra = "Botão extra do mouse (%d)",
+}
+function L.pick(G, setting)
+    if setting == "en" or setting == "pt" then return setting end
+    local ok, code = pcall(function() return G.LOC and G.LOC.GetLocaleCode and G.LOC.GetLocaleCode() end)
+    if ok and code == "pt" then return "pt" end
+    local tr = G.LanguageTranslator
+    if tr ~= nil and (tr.defaultlang == "pt" or tr.defaultlang == "br") then return "pt" end
+    return "en"
+end
+return L

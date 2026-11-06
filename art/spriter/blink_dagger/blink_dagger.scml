@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="b5">
+    <folder id="0" name="blink_dagger">
+        <file id="0" name="blink_dagger/blink_dagger-0.png" width="120" height="115" pivot_x="0.5" pivot_y="0.25"/>
+    </folder>
+    <folder id="1" name="swap_blink_dagger">
+        <file id="0" name="swap_blink_dagger/swap_blink_dagger-0.png" width="93" height="150" pivot_x="0.8710" pivot_y="0.1867"/>
+    </folder>
+    <entity id="0" name="blink_dagger">
+        <animation id="0" name="idle" length="100" interval="100">
+            <mainline>
+                <key id="0" time="0">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="blink_dagger">
+                <key id="0" time="0" spin="1">
+                    <object folder="0" file="0" x="0" y="0" angle="0"/>
+                </key>
+            </timeline>
+        </animation>
+        <animation id="1" name="swap_preview" length="100" interval="100">
+            <mainline>
+                <key id="0" time="0">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="swap_blink_dagger">
+                <key id="0" time="0" spin="1">
+                    <object folder="1" file="0" x="0" y="0" angle="0"/>
+                </key>
+            </timeline>
+        </animation>
+    </entity>
+</spriter_data>

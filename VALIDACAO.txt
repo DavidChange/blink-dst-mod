@@ -1,0 +1,24 @@
+PASS: all mod Lua files parse (Lua 5.4; DST uses Lua 5.1-compatible syntax).
+PASS: 33 geometry, targeting, cooldown, hit-counter and persistence checks (mocked engine).
+PASS: direction validation and five-second cooldown regression checks.
+PASS: permanent strength load/drain/tag and damage regression checks.
+PASS: personal key menu selection, cancel, persistence, failed save and old-key regression checks.
+PASS: mouse capture, scroll direction, UI protection, persistence and legacy binding checks.
+PASS: Runa Eletrica: slot, 30 usos, dash sozinha com recarga, sem recarga com a Dagger, molhado, forca pela fome, consumo so em dash valido, quebra, recarga ao retirar, HUD e dano inalterado.
+PASS: Dagger sempre com arte propria (mesmo resultado em servidor e cliente), icones proprios.
+PASS: choque em cadeia: atraso, mais proximo primeiro, alcance, protecoes, 1x por criatura, limite de saltos, atordoamento nativo.
+PASS: luz da Dagger: acende ao equipar, apaga ao desequipar/remover, opcao desligar.
+PASS: desgaste da Dagger: 150 usos, quebra com aviso e troca automatica, opcao sem desgaste, arma quebrada segura no choque.
+PASS: dash gasta 1 uso da Dagger, ou da Pedra quando equipada; recusado nao gasta; ultimo uso quebra apos o dash.
+PASS: Dagger silenciosa ao segurar; visivel na agua (peca propria em build separado).
+PASS: 12 atlas/KTEX pairs, header, dimensions, payload and references.
+PASS: anim/blink_dagger.zip: mao cobre quadros 0-2 e 5-8 (como a lanca original); chao no quadro 0.
+PASS: peca da agua em build separado como a swap_ham_bat (quadros 0-2 e 5-7); mao 5 quadros; corpo da Pedra 11.
+PASS: fantasma proprio (ghost_blink_build): todas as pecas do fantasma do jogo, cabelo do BLINK.
+PASS: corpo do BLINK: build proprio com todas as pecas/quadros pedidos pelas animacoes do jogador; prefab e skin apontam para "blink".
+PASS: todos os builds com simbolos em ordem crescente de hash, como os do jogo.
+PASS: receitas: Runa (gema roxa, 3 lunares, 4 ouros, 2 pesadelo) no Manipulador das Sombras; Dagger (2 silex, 1 salitre, 1 ouro) no Motor de Alquimia; vida 125, sanidade 250, Runa 30 usos.
+PASS: anim/blink_impeto.zip: corpo nos quadros do amuleto original, chao no banco nativo; atlas DXT5 com mipmaps.
+PASS: todas as texturas de interface com alfa pre-multiplicado (sem halo claro nas bordas).
+PASS: 2 icones de inventario 64x64 e projeto Spriter da Dagger (pastas, imagens, pivos, banco e animacao idle).
+NOT RUN: DST startup, rendering, Mod Tools autocompiler, real combat, multiplayer and caves.
