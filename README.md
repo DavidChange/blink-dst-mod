@@ -163,7 +163,7 @@ Requer Python 3 com Pillow, numpy e scipy (o fantasma usa também OpenCV). O pas
 
 ## Créditos
 
-- **Autor:** Projeto BLINK
+- **Autor:** David Alexander ([@DavidChange](https://github.com/DavidChange)), publicado na Steam como "Projeto BLINK"
 - **Ideia inicial:** inspirada na força do Wolfgang e na *Blink Dagger* do Dota 2. Nenhum asset de outro jogo ou mod foi usado.
 - **Arte do personagem, da Dagger, da Runa e do retrato:** gerada pelo autor com Leonardo.ai (GPT Image 2.5).
 - **Don't Starve Together**, suas animações e os elementos visuais reaproveitados (letras dos nomes, moldura dos retratos, poses de mão e bochechas, fantasma base): © Klei Entertainment. Este é um mod de fã, sem vínculo com a Klei.
@@ -171,4 +171,4 @@ Requer Python 3 com Pillow, numpy e scipy (o fantasma usa também OpenCV). O pas
 
 ## Licença
 
-© 2026 Projeto BLINK. Todos os direitos reservados.
+© © 2026 David Alexander. Todos os direitos reservados.
